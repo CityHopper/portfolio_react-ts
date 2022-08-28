@@ -1,0 +1,38 @@
+$mobile: 480px;
+$desktop: 1024px;
+
+@mixin media($keys...) {
+  @each $key in $keys {
+    @if ($key == mobile) {
+      @include mobile {
+        @content
+    }
+  } @else if ($key == tablet) {
+    @include tablet {
+      @content
+  }
+  } @else if ($key == desktop) {
+    @include desktop {
+      @content
+  }
+  }
+}
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile - 1px}) {
+  @content;
+}
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile}) and (max-width: #{$desktop - 1px}) {
+  @content;
+}
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+  @content;
+}
+}
