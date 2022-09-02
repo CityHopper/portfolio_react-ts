@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Home from "./Home";
+import App from "./About";
 import {Routes, Route, BrowserRouter} from "react-router-dom";
 
 function Content() {
@@ -8,7 +9,7 @@ function Content() {
             <Header/>
                 <Routes>
                     <Route path={"/"} element={<Home/>}/>
-                    {/*<Route path={"/latest"} element={<Latest/>}/>*/}
+                    <Route path={"/about"} element={<App/>}/>
                     {/*<Route path={"/search"} element={<Search/>}/>*/}
                     {/*<Route path={"/search?/*"} element={<Search/>}/>*/}
                     {/*<Route path={`/movies/:id`} element={<Detail/>}/>*/}

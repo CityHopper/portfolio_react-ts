@@ -7,9 +7,8 @@ function Header() {
     const [isScrolledDown, setIsScrolledDown] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const mobileMenuHandler = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-    const [onSearching, setOnSearching] = useState(false);
 
-    const listenScrollEvent = event => {
+    const listenScrollEvent = () => {
         if (window.scrollY < 50) {
             return setIsScrolledDown(false);
         } else if (window.scrollY >= 50) {
@@ -22,14 +21,6 @@ function Header() {
         return () => window.removeEventListener("scroll", listenScrollEvent);
     }, []);
 
-    const [searchInput, setSearchInput] = useState("");
-
-    const onEnter = (e) => {
-        if (e.key === "Enter") {
-            setIsMobileMenuOpen(false)
-            navigate(`/search?queryTerm=${searchInput}`)
-        }
-    }
 
     return (
         <header>

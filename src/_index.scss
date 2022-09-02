@@ -36,22 +36,111 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 .container {
-  margin: 0 0 0 20vw;
-  width: 80vw;
+  margin: 0 0 0 200px;
+  width: calc(100vw - 240px);
   height: 100vh;
   display: flex;
   align-items: center;
+  padding: 20px;
 
-  &__left {
-    //text-align: left;
-    //padding: 10px;
-    //
-    //h1 {
-    //  font-size: 3em;
-    //}
+  .name-card {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+
+    p { text-align: right;}
   }
 
+  &__half {
+    width: 50%;
+    margin-left: 20px;
+  }
 }
+
+
+$total-lines: 6;
+$left-offset: 29px;
+$clip-height: 6vw;
+$line-height: calc(#{$clip-height} - 5px);
+
+.word-step {
+  margin: 0;
+  padding-inline-start: 0;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-size: $clip-height;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  // Sort out nasty text fuzz
+  transform: translate3d(0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+
+  &:hover {
+    p {
+      transform: translate3d(0, -($clip-height), 0);
+    }
+  }
+
+  &__line {
+    height: $clip-height;
+    overflow: hidden;
+    position: relative;
+
+    // Change the perspective of each alternating line
+    &:nth-child(odd) {
+      transform: skew(60deg, -30deg) scaleY(.66667);
+    }
+    &:nth-child(even) {
+      transform: skew(0deg, -30deg) scaleY(1.33333);
+    }
+
+    // Loop over the total lines and apply a left offset
+    @for $i from 1 through $total-lines+1 {
+      &:nth-child(#{$i}) {
+        left: $left-offset * $i;
+      }
+    }
+
+    p {
+      margin: 0;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      height: $clip-height;
+      line-height: $line-height;
+      padding: 0 10px;
+      transition: all .4s ease-in-out;
+      transform: translate3d(0, 0, 0);
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+  }
+}
+
+@include media(tablet, mobile) {
+  .container {
+    justify-content: center;
+    flex-direction: column;
+
+    &__half {
+      width: 100%;
+    }
+  }
+}
+
+
+@include mobile {
+  .container {
+    width: unset;
+    margin: unset;
+  }
+  .word-step {
+    padding: 0;
+  }
+}
+
 
 .flex__start,
 .flex__end,
@@ -88,12 +177,19 @@ h1, h2, h3, h4, h5, h6, a {
   justify-content: center;
 }
 
+.flex__row {
+  flex-direction: row;
+}
 .flex__column {
   flex-direction: column;
 }
 
 .flex__wrap {
   flex-wrap: wrap;
+}
+
+.w--50 {
+  width: 50%;
 }
 
 .button--main {
@@ -105,79 +201,4 @@ h1, h2, h3, h4, h5, h6, a {
   width: max-content;
   height: 40px;
   background: transparent;
-}
-
-
-/*
-** Change this if you need to modify
-** the amount of lines displayed
-*/
-$total-lines: 6;
-
-
-/*
-** Leave these unless you want
-** to open a whole can of worms
-*/
-$left-offset: 29px;
-$clip-height: 60px;
-$line-height: $clip-height - 5px;
-
-.word-step {
-  margin: 0 auto;
-  padding: 80px 0;
-  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-  font-size: $clip-height;
-  font-weight: 900;
-  letter-spacing: -2px;
-  text-transform: uppercase;
-  // Sort out nasty text fuzz
-  transform: translate3d(0, 0, 0);
-  -webkit-font-smoothing: antialiased;
-  -webkit-font-kerning: normal;
-  -webkit-text-size-adjust: 100%;
-
-  &:hover {
-    p {
-      transform: translate3d(0, -($clip-height), 0);
-    }
-  }
-
-  /*
-** Apply common styles to each line of text
-*/
-  &__line {
-    height: $clip-height;
-    overflow: hidden;
-    position: relative;
-
-    // Change the perspective of each alternating line
-    &:nth-child(odd) {
-      transform: skew(60deg, -30deg) scaleY(.66667);
-    }
-    &:nth-child(even) {
-      transform: skew(0deg, -30deg) scaleY(1.33333);
-    }
-
-    // Loop over the total lines and apply a left offset
-    @for $i from 1 through $total-lines+1 {
-      &:nth-child(#{$i}) {
-        left: $left-offset * $i;
-      }
-    }
-
-    p {
-      margin: 0;
-      margin-block-start: 0;
-      margin-block-end: 0;
-      height: $clip-height;
-      line-height: $line-height;
-      padding: 0 10px;
-      transition: all .4s ease-in-out;
-      transform: translate3d(0, 0, 0);
-      vertical-align: top;
-      white-space: nowrap;
-    }
-
-  }
 }

@@ -9,7 +9,8 @@ header {
   top: 0;
 
   .navbar {
-    //font-family: 'Song Myung', serif;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;;
+    font-weight: 900;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,7 +19,7 @@ header {
     background: transparent; /* fallback for old browsers */
     text-decoration: none;
     height: 100vh;
-    width: 20vw;
+    width: 200px;
     padding: 1vw;
     box-sizing: border-box;
     transition: background-color 1s;
@@ -53,8 +54,8 @@ header {
           width: 100%;
           color: var(--gray-100);
           text-decoration: none;
-          font-size: 16px;
-          font-weight: normal;
+          font-size: 1.2em;
+          letter-spacing: 2px;
         }
 
         &:hover a {
@@ -166,6 +167,7 @@ header {
 @include media(tablet, mobile) {
   header {
     .navbar {
+      width: 120px;
 
 
       &__title {
@@ -180,6 +182,11 @@ header {
         }
       }
     }
+  }
+
+  .container {
+    margin-left: 120px;
+    width: calc(100vw - 160px);
   }
 }
 
@@ -250,5 +257,8 @@ header {
     }
 
   }
-
+  .container {
+    margin-left: 0;
+    width: calc(100vw - 40px);
+  }
 }
