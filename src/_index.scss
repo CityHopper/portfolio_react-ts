@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import "_responsive";
 
 :root {
-  --main-color: #262254;
+  --main-color: #635db6;
   --sub-color: #ffa45e;
   --highlight-color: #ec4176;
   --gray-100: #eae9e8;
@@ -35,6 +36,16 @@ h1, h2, h3, h4, h5, h6, a {
   color: var(--gray-100);
 }
 
+h1 {
+  font-family: 'Black Han Sans', sans-serif;
+  letter-spacing: 2px;
+}
+
+p {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
 .container {
   margin: 0 0 0 200px;
   width: calc(100vw - 240px);
@@ -54,6 +65,11 @@ h1, h2, h3, h4, h5, h6, a {
   &__half {
     width: 50%;
     margin-left: 20px;
+
+    h1 {
+      font-size: 3em;
+      color: var(--main-color);
+    }
   }
 }
 

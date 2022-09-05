@@ -197,6 +197,9 @@ function About() {
                     Open-minded person, problem solver, independent worker with high attention to detail.
                     Hope work with positive and passionate people.
                 </p>
+                <p>
+                    Let me make something special!
+                </p>
             </section>
             <section className={"container__half flex__center"}>
                 <WordSphere/>

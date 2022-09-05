@@ -1,6 +1,8 @@
 import Header from "./Header";
 import Home from "./Home";
-import App from "./About";
+import About from "./About";
+import Skills from "./Skills";
+import Career from "./Career";
 import {Routes, Route, BrowserRouter} from "react-router-dom";
 
 function Content() {
@@ -9,11 +11,12 @@ function Content() {
             <Header/>
                 <Routes>
                     <Route path={"/"} element={<Home/>}/>
-                    <Route path={"/about"} element={<App/>}/>
-                    {/*<Route path={"/search"} element={<Search/>}/>*/}
+                    <Route path={"/about"} element={<About/>}/>
+                    <Route path={"/skills"} element={<Skills/>}/>
+                    <Route path={`/career`} element={<Career/>}/>
                     {/*<Route path={"/search?/*"} element={<Search/>}/>*/}
                     {/*<Route path={`/movies/:id`} element={<Detail/>}/>*/}
-                    {/*<Route path={`/about`} element={<About/>}/>*/}
+
                 </Routes>
         </BrowserRouter>
     )

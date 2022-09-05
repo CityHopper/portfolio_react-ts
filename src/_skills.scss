@@ -1,0 +1,30 @@
+@import "_responsive";
+
+
+.chart {
+  width: 100%;
+
+  tr {
+    span {
+
+    }
+    footer {
+      width: 100%;
+      height: 4px;
+      background-color: var(--gray-200);
+      margin-top: 6px;
+      margin-bottom: 20px;
+
+      div {
+        background-color: var(--main-color);
+        height: 4px;
+      }
+    }
+
+
+  }
+}
+
+@include media(tablet, mobile) {
+
+}
