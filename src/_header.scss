@@ -9,7 +9,7 @@ header {
   top: 0;
 
   .navbar {
-    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;;
+    font-family: Futura, sans-serif;
     font-weight: 900;
     display: flex;
     flex-direction: column;
@@ -29,10 +29,12 @@ header {
     &__title {
       width: auto;
       text-align: center;
-      font-weight: bold;
+      font-weight: bolder;
+      font-style: italic;
+      letter-spacing: -2px;
       text-decoration: none;
-      font-family: 'Brush Script MT', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-      font-size: 2.5em;
+      font-size: 2em;
+      word-break: break-word;
       color: var(--gray-100);
     }
 
@@ -171,7 +173,7 @@ header {
 
 
       &__title {
-        font-size: 2em;
+        font-size: 1.4em;
       }
 
       &__menu {
@@ -184,10 +186,6 @@ header {
     }
   }
 
-  .container {
-    margin-left: 120px;
-    width: calc(100vw - 160px);
-  }
 }
 
 @include mobile {
@@ -257,8 +255,5 @@ header {
     }
 
   }
-  .container {
-    margin-left: 0;
-    width: calc(100vw - 40px);
-  }
+
 }

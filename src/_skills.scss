@@ -4,6 +4,16 @@
 .chart {
   width: 100%;
 
+  & tr:nth-child(3n) footer div {
+    background-color: var(--sub-color);
+  }
+  & tr:nth-child(3n-2) footer div {
+    background-color: var(--highlight-color);
+  }
+  & tr:nth-child(3n-1) footer div {
+    background-color: var(--main-color);
+  }
+
   tr {
     span {
 
@@ -16,8 +26,8 @@
       margin-bottom: 20px;
 
       div {
-        background-color: var(--main-color);
         height: 4px;
+        transition: width 1s;
       }
     }
 

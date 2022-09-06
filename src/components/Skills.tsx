@@ -9,8 +9,7 @@ function Skills () {
     let skillList: Array<skill> = [
         {name: "Front-end", level: 90},
         {name: "Back-end", level: 60},
-        {name: "React.js", level: 60},
-        {name: "JavaScript", level: 40}
+        {name: "React.js", level: 60}
     ]
 
     return (
@@ -22,9 +21,9 @@ function Skills () {
                     The main area of my expertise is front-end development, HTML, CSS, JS, and building small and medium web apps.
                 </p>
                 <p>
-                </p>
                     I also have a back-end experience,
                     which I built an API by Flask in order to provide geographic data(GeoJson) on AWS by myself.
+                </p>
                 <p>
                 </p>
             </section>

@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import "_responsive";
 
+
 :root {
-  --main-color: #635db6;
-  --sub-color: #ffa45e;
+  --main-color: #ffa45e;
+  --sub-color: #635db6;
   --highlight-color: #ec4176;
   --gray-100: #eae9e8;
   --gray-200: #b3b3b3;
@@ -14,7 +15,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -28,43 +29,38 @@ h1, h2, h3, h4, h5, h6, a {
   text-decoration: none;
 }
 
-.logo {
-  font-weight: bold;
-  text-decoration: none;
-  font-family: 'Brush Script MT', cursive;
-  font-size: 1.5em;
-  color: var(--gray-100);
-}
 
 h1 {
-  font-family: 'Black Han Sans', sans-serif;
   letter-spacing: 2px;
 }
 
 p {
-  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-family: Futura, sans-serif;
   letter-spacing: 2px;
 }
 
 .container {
   margin: 0 0 0 200px;
-  width: calc(100vw - 240px);
-  height: 100vh;
+  width: calc(100vw - 200px - 6rem);
+  min-height: calc(100vh - 18rem);
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 9rem 3rem;
 
   .name-card {
     position: absolute;
     top: 80px;
     right: 40px;
 
-    p { text-align: right;}
+    p {
+      text-align: right;
+    }
   }
 
   &__half {
     width: 50%;
     margin-left: 20px;
+    margin-bottom: 2em;
 
     h1 {
       font-size: 3em;
@@ -108,6 +104,7 @@ $line-height: calc(#{$clip-height} - 5px);
     &:nth-child(odd) {
       transform: skew(60deg, -30deg) scaleY(.66667);
     }
+
     &:nth-child(even) {
       transform: skew(0deg, -30deg) scaleY(1.33333);
     }
@@ -137,20 +134,24 @@ $line-height: calc(#{$clip-height} - 5px);
 
 @include media(tablet, mobile) {
   .container {
+    margin-left: 120px;
+    width: calc(100vw - 120px - 6rem);
     justify-content: center;
     flex-direction: column;
 
     &__half {
-      width: 100%;
+      width: calc(100% - 20px);
     }
   }
+
 }
 
 
 @include mobile {
   .container {
-    width: unset;
-    margin: unset;
+    margin-left: 0;
+    width: calc(100vw - 6rem);
+    padding: 5rem 3rem;
   }
   .word-step {
     padding: 0;
@@ -196,6 +197,7 @@ $line-height: calc(#{$clip-height} - 5px);
 .flex__row {
   flex-direction: row;
 }
+
 .flex__column {
   flex-direction: column;
 }
@@ -213,6 +215,7 @@ $line-height: calc(#{$clip-height} - 5px);
   border: 1px solid var(--sub-color);
   padding: 10px 30px;
   color: var(--sub-color);
+  font-family: Futura, sans-serif;
   letter-spacing: 6px;
   width: max-content;
   height: 40px;
