@@ -24,7 +24,7 @@ header {
     box-sizing: border-box;
     transition: background-color 1s;
     text-shadow: 1px 1px 2px var(--dark-bg-color);
-    border-right: 1px solid pink;
+    border-right: 1px solid var(--gray-200);
 
     &__title {
       width: auto;

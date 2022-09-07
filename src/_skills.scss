@@ -1,23 +1,48 @@
 @import "_responsive";
 
+.box {
+  max-width: 800px;
+  width: calc(100% - 2em);
+  background-color: var(--gray-300);
+  padding: 2em;
+  margin-bottom: 1em;
+
+  &__title {
+    text-align: center;
+    background-color: var(--sub-color);
+    padding: 0.3em 0;
+  }
+}
 
 .chart {
   width: 100%;
 
-  & tr:nth-child(3n) footer div {
+  & tr:nth-child(4n) footer div {
     background-color: var(--sub-color);
   }
-  & tr:nth-child(3n-2) footer div {
+
+  & tr:nth-child(4n-3) footer div {
     background-color: var(--highlight-color);
   }
-  & tr:nth-child(3n-1) footer div {
+
+  & tr:nth-child(4n-2) footer div {
     background-color: var(--main-color);
   }
 
-  tr {
-    span {
+  & tr:nth-child(4n-1) footer div {
+    background-color: var(--blue-color);
+  }
 
+  tr {
+
+    span {
+      background-color: var(--gray-200);
+      padding: 0.2em 0.4em;
+      border-radius: 10px;
+      margin-right: 0.8em;
+      font-size: 0.8em;
     }
+
     footer {
       width: 100%;
       height: 4px;
@@ -29,6 +54,13 @@
         height: 4px;
         transition: width 1s;
       }
+    }
+
+    hr {
+      width: 70%;
+      border: 0;
+      margin: 1em auto;
+      border-top: 1px dotted var(--gray-300)
     }
 
 
