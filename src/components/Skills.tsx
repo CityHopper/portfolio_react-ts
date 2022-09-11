@@ -10,7 +10,7 @@ function Skills () {
     let skillList: Array<skill> = [
         {name: "Front-end", level: 90, item:["React", "Redux", "HTML5", "SCSS", "CSS3", "ES6+", "TypeScript"]},
         {name: "Back-end", level: 60, item:["Flask", "AWS", "Django", "SQL"]},
-        {name: "Data Science", level: 50, item:["Python", "Pandas", "Numpy", "NLP"]},
+        {name: "Data Science", level: 50, item:["Python", "R", "Pandas", "Numpy", "NLP"]},
         {name: "Co-work", level: 70, item: ["Git (GitHub/GitLab)", "Zeplin", "Slack"]}
     ]
 
@@ -28,7 +28,8 @@ function Skills () {
                     had built an Flask API providing geographic data(GeoJson) at a start-up company by myself.
                 </p>
                 <p>
-                    I also have data analysis ability with Python(Pandas, numpy) and R.
+                    Also, I have data analysis ability with Python(Pandas, numpy) and R,
+                    which I got from a 6-month bigdata course from.
                 </p>
             </section>
             <section className={"container__half"}>

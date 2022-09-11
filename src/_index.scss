@@ -138,6 +138,30 @@ $line-height: calc(#{$clip-height} - 5px);
   }
 }
 
+.form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 500px;
+
+  label {
+    text-align: right;
+    margin-right: 1em;
+    width: max-content;
+  }
+
+  &__error {
+    grid-column: 1/3;
+    text-align: center;
+  }
+
+  button {
+    grid-column: 1/3;
+  }
+
+
+
+}
+
 @include media(tablet, mobile) {
   .container {
     margin-left: 120px;
