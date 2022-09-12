@@ -6,7 +6,7 @@ function Home() {
                     Younghoon KANG, <br/>
                     Front-end Developer
                 </p>
-                <button className={"button--main flex__center"}>
+                <button className={"button button--main flex__center"}>
                     Contact Me!
                 </button>
             </div>
