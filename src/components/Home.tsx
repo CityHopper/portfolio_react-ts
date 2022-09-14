@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 function Home() {
     return (
         <section className={"container flex__row flex__start"}>
@@ -6,9 +8,11 @@ function Home() {
                     Younghoon KANG, <br/>
                     Front-end Developer
                 </p>
-                <button className={"button button--main flex__center"}>
-                    Contact Me!
-                </button>
+                <Link to={"/contact"}>
+                    <button className={"button button--main flex__center"}>
+                        Contact Me!
+                    </button>
+                </Link>
             </div>
             <ul className="word-step">
                 <li className="word-step__line">
