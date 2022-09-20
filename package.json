@@ -2,6 +2,7 @@
   "name": "portfolio_react-ts",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://CityHopper.github.io/portfolio_react-ts",
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -20,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +47,7 @@
     "@types/node": "^18.7.13",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "gh-pages": "^4.0.0",
     "sass": "^1.54.5"
   }
 }
