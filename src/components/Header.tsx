@@ -9,7 +9,7 @@ function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const mobileMenuHandler = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
-    const {t, i18n} = useTranslation("main")
+    const {t, i18n} = useTranslation("home")
     const toggleLocales = useCallback(
         (locale: string) => {
             i18n.changeLanguage(locale);
@@ -29,9 +29,12 @@ function Header() {
         return () => window.removeEventListener("scroll", listenScrollEvent);
     }, []);
 
-    const languageToggler = () => {
+    const [isKo, setIsKo] = useState<boolean>(true);
 
-    }
+    useEffect(() => {
+        console.log("i18n", i18n.language)
+        i18n.language === 'ko-KR' ? setIsKo(true) : setIsKo(false)
+    }, [i18n.language])
 
     return (
         <header>
@@ -65,12 +68,13 @@ function Header() {
                         ? "navbar__misc active"
                         : "navbar__misc"}>
                     <li className="navbar__misc__item flex__center">
-                        <button className={"flex__center"} onClick={() => toggleLocales("en-US")}
-                                 >en</button>
-                    </li>
-                    <li className="navbar__misc__item flex__center">
-                        <button className={"flex__center"} onClick={() => toggleLocales("ko-KR")}
-                                 >ko</button>
+                        {isKo
+                            ?
+                            <button className={"flex__center"} onClick={() => toggleLocales("en-US")}>ENGLISH</button>
+                            :
+                            <button className={"flex__center"} onClick={() => toggleLocales("ko-KR")}>한국어</button>
+
+                        }
                     </li>
                     {/*<li className="navbar__misc__item flex__center">*/}
                     {/*    <NavLink className={"flex__center"} onClick={() => setIsMobileMenuOpen(false)}*/}
