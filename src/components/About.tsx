@@ -1,5 +1,6 @@
 import {memo, useRef, useState, RefObject, useCallback, useEffect} from 'react';
 import '_about.scss';
+import {useTranslation} from "react-i18next";
 
 const texts: string[] = [
     'React.js',
@@ -184,21 +185,19 @@ const WordSphere = memo(() => {
 
 
 function About() {
+    const [t] = useTranslation();
     return (
         <article className={"container"}>
             <section className={"container__half"}>
                 <h1>About Myself</h1>
                 <p>
-                    I am a Front-end Developer located in Jeju, South Korea.
-                    Love to spend pains on user-friendly interface and sustainable codes.
-                    Eager to learn new technologies and share them with co-workers. <br/>
+                    {t("about:about-1")}
                 </p>
                 <p>
-                    Open-minded person, problem solver, independent worker with high attention to detail.
-                    Hope work with positive and passionate people.
+                    {t("about:about-2")}
                 </p>
                 <p>
-                    Let me make something special!
+                    {t("about:about-3")}
                 </p>
             </section>
             <section className={"container__half flex__center"}>

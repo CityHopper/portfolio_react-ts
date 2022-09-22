@@ -1,6 +1,9 @@
 import "_skills.scss"
+import {useTranslation} from "react-i18next";
 
 function Skills () {
+    const [t] = useTranslation();
+
     interface skill {
         name: string;
         level: number;
@@ -19,17 +22,13 @@ function Skills () {
             <section className={"container__whole"}>
                 <h1>Skills & Qualification</h1>
                 <p>
-                    I create successful responsive websites with up-to-date technologies.
-                    The main area of my expertise is front-end development,
-                    HTML, CSS, JS, and building small and medium web apps.
+                    {t("skills:skills-1")}
                 </p>
                 <p>
-                    Regarding back-end experience,
-                    had built an Flask API providing geographic data(GeoJson) at a start-up company by myself.
+                    {t("skills:skills-2")}
                 </p>
                 <p>
-                    Also, I have data analysis ability with Python(Pandas, numpy) and R,
-                    which I got from a 6-month bigdata course from.
+                    {t("skills:skills-3")}
                 </p>
             </section>
             <section className={"container__half"}>
