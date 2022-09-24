@@ -19,7 +19,7 @@ function Skills () {
 
     return (
         <article className={"container"}>
-            <section className={"container__whole"}>
+            <section className={"container__half"}>
                 <h1>Skills & Qualification</h1>
                 <p>
                     {t("skills:skills-1")}
