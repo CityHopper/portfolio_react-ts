@@ -1,0 +1,61 @@
+{
+  "company": [
+    {
+      "name": "(주)미래해양정보기술",
+      "period": "2020.11 ~ 2022.05",
+      "role": "서비스개발부, 선임연구원",
+      "project": [
+        {
+          "title": "해상교통정보 웹 서비스 (Front-end) - oceantraffic.net",
+          "content": [
+            "오픈소스 지도(Leaflet) 기반 SPA 개발",
+            "지도 위 선박 항로 및 데이터(GeoJson) 시각화 구현",
+            "Redux를 통한 상태 관리 개선",
+            "반응형 웹 퍼블리싱"
+          ]
+        },
+        {
+          "title": "해상교통정보 웹 서비스 (Back-end)",
+          "content": [
+            "Python-Flask RESTful API 개발",
+            "AWS (EC2, ubuntu) 배포 및 서버 관리"
+          ]
+        },
+        {
+          "title": "기타 프로젝트",
+          "content": [
+            "해양분야 교육 웹 서비스 반응형 웹 퍼블리싱",
+            "인공지능 경진대회 참가 등 데이터 분석 프로젝트 일부 참여"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Amadeus IT Group",
+      "period": "2016.07 ~ 2017.02",
+      "role": "Product Management",
+      "project": [
+        {
+          "title": "Amadeus Destination Content (Asia Regional Product)",
+          "content": [
+            "여행 상품 예약 플랫폼 이슈 관리 및 파일럿 예약 통계 도출",
+            "신규 론칭 대비 플랫폼 User Guide, Specifications, 마케팅 등 문서 제작",
+            "플랫폼 웹 디자인 시안 제작 및 스토리보드 작성",
+            "한국 결제 시스템 도입을 위한 한영 문서 번역"
+          ]
+        }
+      ]
+    }
+  ],
+  "education": {
+    "name": "산업별 프로젝트 기반 빅데이터 전략 마에스트로 과정",
+    "association": "한국경제신문/제주테크노파크",
+    "content": [
+      "기초통계학 및 R/Python을 통한 공공 데이터 분석과 시각화",
+      "MySQL을 통한 데이터베이스 이해",
+      "웹 크롤링(BeautifulSoup/Selenium)을 통한 웹 데이터 수집",
+      "Tensorflow/Keras 프레임워크 활용 머신러닝 및 딥러닝 모델링",
+      "자연어처리(NLP) 활용 제주 관광 정보 인공지능 챗봇 개발\n(2020 제주 공공데이터 활용 창업경진대회 참가)"
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "company": [
+    {
+      "name": "Future Ocean Information Technology, Inc.",
+      "period": "2020.11 ~ 2022.05",
+      "role": "Service Development, Senior Researcher",
+      "project": [
+        {
+          "title": "Marine AI Service Front-end - oceantraffic.net",
+          "content": [
+            "Built SPA with open-source map Leaflet",
+            "Produced visualization of vessel data(GeoJson) on map",
+            "Enhanced state management using Redux",
+            "Delivered responsive, cross-browser compatible and accessibility websites"
+          ]
+        },
+        {
+          "title": "Marine AI Service Back-end",
+          "content": [
+            "Developed and designed RESTful API using Flask",
+            "Maintained and Distributed API on AWS(EC2, ubuntu)"
+          ]
+        },
+        {
+          "title": "Other Projects",
+          "content": [
+            "Delivered responsive web for an education service",
+            "Participated in data science projects"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Amadeus IT Group",
+      "period": "2016.07 ~ 2017.02",
+      "role": "Product Management",
+      "project": [
+        {
+          "title": "Amadeus Destination Content (Asia Regional Product)",
+          "content": [
+            "Assisted product manager and managed platform’s issues & performance",
+            "Developed product documentation for customer satisfaction & business development",
+            "Collected platform’s booking statistics and delivered a regular report",
+            "Consolidated APAC employees’ product knowledge status data and notified each branch"
+          ]
+        }
+      ]
+    }
+  ],
+  "education": {
+      "name": "Big Data Course",
+      "association": "The Korea Economic Daily/Jeju TechnoPark",
+      "content": [
+        "Basic statistics and data analysis with visualization using R/Python",
+        "Understanding of databases with MySQL",
+        "Web data scraping using BeautifulSoup/Selenium",
+        "AI modeling using Tensorflow/Keras framework",
+        "Designed and developed Jeju Tourist Info ChatBot with Natural Language Processing \n (Participated in 2020 Jeju Public Data Start-up Competition)"
+      ]
+    }
+}
