@@ -32,21 +32,21 @@ function Skills () {
                 </p>
             </section>
             <section className={"container__half"}>
-                <table className={"chart"}>
-                { skillList.map((i, index) => (
-                    <tr>
+                <div className={"chart"}>
+                { skillList.map((i: any, id: number) => (
+                    <div key={id}>
                         <h4>{i.name}</h4>
                         <footer>
                             <div style={{width: `${i.level}%`}} />
                         </footer>
-                        {i.item.map((itm) => (
-                            <span className={""}>{itm}</span>
+                        {i.item.map((itm:string, itmId:number) => (
+                            <span key={itmId} className={""}>{itm}</span>
                         ))}
                         <hr/>
-                    </tr>
+                    </div>
                 ))
                 }
-                </table>
+                </div>
             </section>
         </article>
     )
