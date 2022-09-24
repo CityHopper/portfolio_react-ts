@@ -1,8 +1,11 @@
 import {useRef} from "react";
 import {useForm, SubmitHandler} from "react-hook-form";
 import emailjs from '@emailjs/browser';
+import {useTranslation} from "react-i18next";
 
 function Contact() {
+    const [t] = useTranslation('contact');
+
     interface FormValue {
         name: string;
         email: string;
@@ -35,28 +38,28 @@ function Contact() {
                 <h1>Contact Me</h1>
                 <form className={"form"} ref={form}
                       onSubmit={handleSubmit(onSubmitHandler)}>
-                    <label>name</label>
+                    <label>{t("name")}</label>
                     <input {...register("name", {required: true})} />
                     <div className={"form__error"}>{errors.name && errors.name.type === "required" && (
-                        <>이름을 입력해 주세요.</>
+                        <>{t("name_error")}</>
                     )}</div>
-                    <label>email</label>
+                    <label>{t("email")}</label>
                     <input type="email" {...register("email",
                         {required: true, pattern: /^\S+@\S+$/i})} />
                     <div className={"form__error"}>{errors.email && errors.email.type === "required" && (
-                        <>이메일을 정확히 입력해 주세요.</>
+                        <>{t("email_error")}</>
                     )}</div>
-                    <label>subject</label>
+                    <label>{t("subject")}</label>
                     <input {...register("subject", {required: true})} />
                     <div className={"form__error"}>{errors.subject && errors.subject.type === "required" && (
-                        <>제목을 입력해 주세요.</>
+                        <>{t("subject_error")}</>
                     )}</div>
-                    <label>message</label>
+                    <label>{t("message")}</label>
                     <textarea rows={10} {...register("message", {required: true})} />
                     <div className={"form__error"}>{errors.message && errors.message.type === "required" && (
-                        <>내용을 입력해 주세요.</>
+                        <>{t("message_error")}</>
                     )}</div>
-                    <button type={"submit"} className={"button button--main"}>Send</button>
+                    <button type={"submit"} className={"button button--main"}>{t("send")}</button>
                 </form>
             </section>
         </article>

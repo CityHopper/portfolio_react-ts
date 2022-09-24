@@ -1,0 +1,11 @@
+{
+  "name": "성함",
+  "email": "이메일 주소",
+  "subject": "제목",
+  "message": "내용",
+  "send": "보내기",
+  "name_error": "이름을 입력해 주세요.",
+  "email_error": "이메일을 정확히 입력해 주세요.",
+  "subject_error": "제목을 입력해 주세요",
+  "message_error": "내용을 입력해 주세요."
+}
