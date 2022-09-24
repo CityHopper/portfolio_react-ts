@@ -7,5 +7,7 @@
   "name_error": "Please fill in the name.",
   "email_error": "Please check your email.",
   "subject_error": "Please fill in the subject.",
-  "message_error": "Please fill in the message."
+  "message_error": "Please fill in the message.",
+  "email_sent": "E-mail sent. Thank you.",
+  "email_unsent": "Failed. Please try later again."
 }

@@ -7,5 +7,7 @@
   "name_error": "이름을 입력해 주세요.",
   "email_error": "이메일을 정확히 입력해 주세요.",
   "subject_error": "제목을 입력해 주세요",
-  "message_error": "내용을 입력해 주세요."
+  "message_error": "내용을 입력해 주세요.",
+  "email_sent": "메일이 전송되었습니다. 감사합니다.",
+  "email_unsent": "메일 전송에 실패했습니다."
 }

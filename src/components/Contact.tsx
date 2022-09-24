@@ -24,11 +24,11 @@ function Contact() {
         emailjs.sendForm(serviceId, templateId, form.current!, publicKey)
             .then((result) => {
                 // console.log(result.text);
-                alert("E-mail sent.")
+                alert(t("email_sent"))
                 reset();
             }, (error) => {
                 console.log(error.text);
-                alert("Failed!")
+                alert(t("email_unsent"))
             });
     }
 

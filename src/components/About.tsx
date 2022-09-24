@@ -3,7 +3,7 @@ import '_about.scss';
 import {useTranslation} from "react-i18next";
 
 const texts: string[] = [
-    'React.js',
+    'React',
     'Redux',
     'JavaScript(ES6+)',
     'TypeScript',
