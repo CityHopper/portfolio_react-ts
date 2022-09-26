@@ -45,6 +45,7 @@ h1 {
   display: flex;
   align-items: center;
   padding: 9rem 3rem;
+  overflow-x: hidden;
 
   .name-card {
     position: absolute;
@@ -58,6 +59,7 @@ h1 {
 
   h1 {
     font-size: 3em;
+    word-break: break-word;
     color: var(--main-color);
   }
 
@@ -201,15 +203,43 @@ $line-height: calc(#{$clip-height} - 5px);
     }
   }
 
+  .form {
+    width: 100%;
+    grid-row-gap: 0.5em;
+
+    label {
+      align-self: center;
+    }
+  }
 }
 
 
 @include mobile {
   .container {
     margin-left: 0;
-    width: calc(100vw - 6rem);
-    padding: 5rem 3rem;
+    width: calc(100vw - 2em);
+    height: calc(100% - 6em);
+    padding: 3rem 1rem;
+
+    h1 {
+      font-size: 2em;
+    }
+
+    &__half {
+      margin-left: 0;
+
+      p {
+        margin-right: 0;
+      }
+    }
   }
+
+  .navbar {
+    &__misc {
+      border-bottom: 1px solid var(--gray-100);
+    }
+  }
+
   .word-step {
     padding: 0;
   }

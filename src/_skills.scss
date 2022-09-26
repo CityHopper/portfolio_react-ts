@@ -12,6 +12,16 @@
     background-color: var(--sub-color);
     padding: 0.3em 0;
   }
+
+  &__content {
+    &__summary {
+      width: 25%;
+    }
+    &__detail {
+      width: 75%;
+    }
+
+  }
 }
 
 .chart {
@@ -33,13 +43,19 @@
     background-color: var(--blue-color);
   }
 
-  div {
-    span {
-      background-color: var(--gray-200);
-      padding: 0.2em 0.4em;
-      border-radius: 10px;
-      margin-right: 0.8em;
-      font-size: 0.8em;
+  &__group {
+
+    &__skills {
+      width: 100%;
+
+      span {
+        background-color: var(--gray-200);
+        padding: 0.2em 0.4em;
+        border-radius: 10px;
+        margin-right: 0.8em;
+        margin-bottom: 1em;
+        font-size: 0.8em;
+      }
     }
 
     footer {
@@ -67,5 +83,25 @@
 }
 
 @include media(tablet, mobile) {
+  .box {
+    width: calc(100% - 3em);
+    padding: 1em;
 
+    &__content {
+      flex-direction: column;
+      &__summary, &__detail{
+        width: 90%;
+      }
+      &__summary {
+        text-align: center;
+      }
+
+      &__detail {
+        ul {
+          margin-block-start: 0;
+          //padding-left: 0;
+        }
+      }
+    }
+  }
 }
