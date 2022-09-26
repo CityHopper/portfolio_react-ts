@@ -200,6 +200,7 @@ $line-height: calc(#{$clip-height} - 5px);
 
     &__half {
       width: calc(100% - 20px);
+      margin: 0;
     }
   }
 

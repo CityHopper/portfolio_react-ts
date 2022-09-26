@@ -73,7 +73,7 @@ const createInitialState = (size: number) => {
 }
 
 const {radius, maxSpeed, initSpeed, direction} = {
-    radius: 200 as number,
+    radius: window.screen.height/3 as number,
     maxSpeed: 10 as number,
     initSpeed: 20 as number,
     direction: 135 as number
@@ -186,6 +186,11 @@ const WordSphere = memo(() => {
 
 function About() {
     const [t] = useTranslation();
+
+    let width = window.screen.width;
+    useEffect(()=>{
+        console.log(width)
+    },[])
     return (
         <article className={"container"}>
             <section className={"container__half"}>
