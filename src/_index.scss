@@ -64,7 +64,7 @@ h1 {
   }
 
   &__half {
-    width: 50%;
+    width: calc(50% - 20px);
     margin-left: 20px;
     margin-bottom: 2em;
 
@@ -216,6 +216,10 @@ $line-height: calc(#{$clip-height} - 5px);
 
 
 @include mobile {
+  .word-step {
+    margin-top:10em;
+  }
+
   .container {
     margin-left: 0;
     width: calc(100vw - 2em);

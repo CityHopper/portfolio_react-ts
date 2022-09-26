@@ -24,6 +24,15 @@
   }
 }
 
+.certs {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+
+  p {
+    text-align: center;
+  }
+}
+
 .chart {
   width: 100%;
 
@@ -101,6 +110,26 @@
           margin-block-start: 0;
           //padding-left: 0;
         }
+      }
+    }
+  }
+
+}
+
+@include mobile {
+  .certs {
+    grid-template-columns: 1fr;
+
+    p {
+      margin-block-start: 0;
+      &:nth-child(4n-1):after {
+        content:"";
+        display:flex;
+        margin: 1em 0;
+        transform: translateX(calc(13%));
+        background-color: var(--main-color);
+        height: 1px;
+        width: 80%;
       }
     }
   }

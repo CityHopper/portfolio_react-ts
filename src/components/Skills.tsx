@@ -1,8 +1,9 @@
 import "_skills.scss"
 import {useTranslation} from "react-i18next";
+import {Fragment} from "react";
 
 function Skills() {
-    const [t] = useTranslation();
+    const [t] = useTranslation("skills");
 
     interface skill {
         name: string;
@@ -17,18 +18,26 @@ function Skills() {
         {name: "Co-work", level: 70, item: ["Git (GitHub/GitLab)", "Zeplin", "Slack"]}
     ]
 
+    type Certification = {
+        date: string;
+        name: string;
+        issuer: string;
+    }
+
+    const certs: Certification[] = t("certifications", {returnObjects: true});
+
     return (
-        <article className={"container"}>
+        <article className={"container flex__wrap"}>
             <section className={"container__half"}>
                 <h1>Skills & Qualification</h1>
                 <p>
-                    {t("skills:skills-1")}
+                    {t("skills-1")}
                 </p>
                 <p>
-                    {t("skills:skills-2")}
+                    {t("skills-2")}
                 </p>
                 <p>
-                    {t("skills:skills-3")}
+                    {t("skills-3")}
                 </p>
             </section>
             <section className={"container__half"}>
@@ -48,6 +57,21 @@ function Skills() {
                         </div>
                     ))
                     }
+                </div>
+            </section>
+            <section className={"container__whole flex__center"}>
+                <div className={"box"}>
+                    <h4 className={"box__title"}>Certificates</h4>
+                    <div className={"certs"}>
+                        {certs ? (certs || []).map((cert:any, id:number) => (
+                            <Fragment key={id}>
+                                <p><strong>{cert.name}</strong></p>
+                                <p>{cert.date}</p>
+                                <p>{cert.issuer}</p>
+                            </Fragment>
+                        )) : null}
+                    </div>
+
                 </div>
             </section>
         </article>
