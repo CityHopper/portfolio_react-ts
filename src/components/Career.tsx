@@ -4,7 +4,6 @@ import {useTranslation} from "react-i18next";
 
 function Career() {
     const [t] = useTranslation('career');
-
     const company: Company[] = t('company', {returnObjects: true});
 
     type Company = {
@@ -25,10 +24,6 @@ function Career() {
         content?: string[];
     }
     const education: Education = t('education', {returnObjects: true});
-
-    useEffect(() => {
-        console.log(company)
-    }, [])
 
     return (
         <article className={"container flex__column"}>

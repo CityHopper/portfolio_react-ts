@@ -160,9 +160,9 @@ header {
     }
   }
 
-  .navbar-dark {
+  .navbar--dark {
     background: var(--dark-bg-color);
-    //background: linear-gradient(to bottom, var(--dark-bg-color), transparent);
+    height: 100vh;
 
     .navbar__title {
       background: -webkit-linear-gradient(225deg, rgb(108, 45, 134) 0%, rgb(61, 105, 164) 35%, rgb(255, 255, 255) 100%);
@@ -199,6 +199,7 @@ header {
 @include mobile {
   header {
     .navbar {
+      $c: &;
       width: 100vw;
       border-right: none;
       flex-direction: column;
@@ -260,6 +261,9 @@ header {
 
       }
 
+    }
+    .navbar--dark {
+      height: 100vh;
     }
 
   }

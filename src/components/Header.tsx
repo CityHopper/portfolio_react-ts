@@ -1,5 +1,5 @@
-import {useCallback, useEffect, useState} from "react";
-import {Link, NavLink, useNavigate} from "react-router-dom";
+import React, {useCallback, useEffect, useState} from "react";
+import {Link, NavLink, useLocation, useNavigate} from "react-router-dom";
 import "../_header.scss"
 import {useTranslation} from "react-i18next";
 
@@ -8,6 +8,27 @@ function Header() {
     const [isScrolledDown, setIsScrolledDown] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const mobileMenuHandler = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
+    const location = useLocation();
+    useEffect(() => {
+        window.scrollTo(0,0);
+    },[location.pathname])
+
+
+    // // 메뉴바 외부 영역 클릭시 메뉴바 닫기
+    // const handleClickOutSide = (e: React.PointerEvent<HTMLBodyElement>) => {
+    //     console.log(ref.current.contains(e.target))
+    //     if (isMobileMenuOpen && !ref.current.contains(e.target)) {
+    //         setIsMobileMenuOpen(false)
+    //     }
+    // }
+    //
+    // useEffect(() => {
+    //     if (isMobileMenuOpen) document.addEventListener('mousedown', handleClickOutSide)
+    //     return () => {
+    //         document.removeEventListener('mousedown', handleClickOutSide)
+    //     }
+    // })
 
     const {t, i18n} = useTranslation("home")
     const toggleLocales = useCallback(
@@ -39,7 +60,7 @@ function Header() {
     return (
         <header>
             <nav role="navigation" className={
-                (!isScrolledDown && !isMobileMenuOpen) ? "navbar flex__start" : "navbar navbar-dark flex__start"}>
+                (!isScrolledDown && !isMobileMenuOpen) ? "navbar flex__start" : "navbar navbar--dark flex__start"}>
                 <Link className="navbar__title"
                       to={"/"} tabIndex={0}>Younghoon KANG</Link>
                 <ul
@@ -70,9 +91,14 @@ function Header() {
                     <li className="navbar__misc__item flex__center">
                         {isKo
                             ?
-                            <button className={"flex__center"} onClick={() => toggleLocales("en-US")}>ENGLISH</button>
+                            <button className={"flex__center"} onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                toggleLocales("en-US");
+                            }}>ENGLISH</button>
                             :
-                            <button className={"flex__center"} onClick={() => toggleLocales("ko-KR")}>한국어</button>
+                            <button className={"flex__center"} onClick={() => {
+                                setIsMobileMenuOpen(false);
+                             toggleLocales("ko-KR")}}>한국어</button>
 
                         }
                     </li>

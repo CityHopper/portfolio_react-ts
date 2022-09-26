@@ -4,7 +4,8 @@ import About from "./About";
 import Skills from "./Skills";
 import Career from "./Career";
 import Contact from "./Contact";
-import {Routes, Route, BrowserRouter} from "react-router-dom";
+import {Routes, Route, BrowserRouter, useLocation} from "react-router-dom";
+import {useEffect} from "react";
 
 function Content() {
     return (
