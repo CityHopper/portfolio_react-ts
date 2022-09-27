@@ -31,7 +31,7 @@ function Skills() {
     return (
         <article className={"container flex__wrap"}>
             <section className={"container__half"}>
-                <h1>Skills & Qualification</h1>
+                <h1>Skills & Qualifications</h1>
                 <p>
                     {t("skills-1")}
                 </p>
