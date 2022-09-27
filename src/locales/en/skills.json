@@ -13,5 +13,12 @@
       "name": "ADsP : Advanced Data Analytics Semi-Professional",
       "issuer": "Korea Data Agency"
     }
-  ]
+  ],
+  "works": [
+    {
+      "name": "ReactMovie",
+      "url": "https://cityhopper.github.io/react_movie/"
+    }
+  ],
+  "view": "View"
 }

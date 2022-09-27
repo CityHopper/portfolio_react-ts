@@ -19,12 +19,14 @@ function Skills() {
     ]
 
     type Certification = {
-        date: string;
+        date?: string;
         name: string;
-        issuer: string;
+        issuer?: string;
+        url?: string;
     }
 
     const certs: Certification[] = t("certifications", {returnObjects: true});
+    const works: Certification[] = t("works", {returnObjects: true});
 
     return (
         <article className={"container flex__wrap"}>
@@ -61,7 +63,7 @@ function Skills() {
             </section>
             <section className={"container__whole flex__center"}>
                 <div className={"box"}>
-                    <h4 className={"box__title"}>Certificates</h4>
+                    <h4 className={"box__title bg--gray"}>Certificates</h4>
                     <div className={"certs"}>
                         {certs ? (certs || []).map((cert:any, id:number) => (
                             <Fragment key={id}>
@@ -71,9 +73,23 @@ function Skills() {
                             </Fragment>
                         )) : null}
                     </div>
-
                 </div>
             </section>
+
+            <section className={"container__whole flex__center"}>
+                <div className={"box"}>
+                    <h4 className={"box__title bg--gray"}>Works</h4>
+                    <div className={"works"}>
+                        {works ? (works || []).map((w:any, wid:number) => (
+                            <Fragment key={wid}>
+                                <p><strong>{w.name}</strong></p>
+                                <button onClick={() => window.open(`${w.url}`)}>{t("view")}</button>
+                            </Fragment>
+                        )) : null}
+                    </div>
+                </div>
+            </section>
+
         </article>
     )
 }

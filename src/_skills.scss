@@ -9,7 +9,6 @@
 
   &__title {
     text-align: center;
-    background-color: var(--sub-color);
     padding: 0.3em 0;
   }
 
@@ -27,6 +26,14 @@
 .certs {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
+
+  p {
+    text-align: center;
+  }
+}
+.works {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   p {
     text-align: center;

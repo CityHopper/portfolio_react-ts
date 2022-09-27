@@ -13,5 +13,12 @@
       "name": "데이터분석준전문가(ADsP)",
       "issuer": "한국데이터베이스진흥원"
     }
-  ]
+  ],
+  "works": [
+    {
+      "name": "리액트무비",
+      "url": "https://cityhopper.github.io/react_movie/"
+    }
+  ],
+  "view": "보러 가기"
 }

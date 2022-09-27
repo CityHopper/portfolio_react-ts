@@ -11,24 +11,8 @@ function Header() {
 
     const location = useLocation();
     useEffect(() => {
-        window.scrollTo(0,0);
-    },[location.pathname])
-
-
-    // // 메뉴바 외부 영역 클릭시 메뉴바 닫기
-    // const handleClickOutSide = (e: React.PointerEvent<HTMLBodyElement>) => {
-    //     console.log(ref.current.contains(e.target))
-    //     if (isMobileMenuOpen && !ref.current.contains(e.target)) {
-    //         setIsMobileMenuOpen(false)
-    //     }
-    // }
-    //
-    // useEffect(() => {
-    //     if (isMobileMenuOpen) document.addEventListener('mousedown', handleClickOutSide)
-    //     return () => {
-    //         document.removeEventListener('mousedown', handleClickOutSide)
-    //     }
-    // })
+        window.scrollTo(0, 0);
+    }, [location.pathname])
 
     const {t, i18n} = useTranslation("home")
     const toggleLocales = useCallback(
@@ -94,9 +78,11 @@ function Header() {
                         : "navbar__misc"}>
                     <li className="navbar__misc__item flex__between">
                         <button onClick={() => window.open(`https://github.com/CityHopper/react_movie`)}>
-                            GitHub</button>
+                            GitHub
+                        </button>
                         <button onClick={() => window.open("https://is-this-it.tistory.com")}>
-                            Blog</button>
+                            Blog
+                        </button>
                     </li>
 
                     <li className="navbar__misc__item flex__center">
@@ -109,7 +95,8 @@ function Header() {
                             :
                             <button className={"flex__center"} onClick={() => {
                                 setIsMobileMenuOpen(false);
-                             toggleLocales("ko-KR")}}>한국어</button>
+                                toggleLocales("ko-KR")
+                            }}>한국어</button>
 
                         }
                     </li>

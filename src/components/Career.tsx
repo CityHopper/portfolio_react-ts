@@ -30,7 +30,7 @@ function Career() {
             <h1>Career & Experience</h1>
             {company ? (company || []).map((com: any, id: number) => (
                     <section key={id} className={"box"}>
-                        <h4 className={"box__title"}>{com.name}</h4>
+                        <h4 className={"box__title bg--gray"}>{com.name}</h4>
                         <div className={"box__content flex__between"}>
                             <div className="box__content__summary">
                                 <h5>{com.role}</h5>
@@ -55,7 +55,7 @@ function Career() {
             ) : null}
 
             <section className={"box"}>
-                <h4 className={"box__title"}>{education.name}</h4>
+                <h4 className={"box__title bg--gray"}>{education.name}</h4>
                 <div className={"box__content flex__between"}>
                     <div className={"box__content__summary"}>
                         <h5>{education && education.association}</h5>
