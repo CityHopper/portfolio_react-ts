@@ -77,7 +77,7 @@ function Header() {
                         ? "navbar__misc active"
                         : "navbar__misc"}>
                     <li className="navbar__misc__item flex__between">
-                        <button onClick={() => window.open(`https://github.com/CityHopperg`)}>
+                        <button onClick={() => window.open(`https://github.com/CityHopper`)}>
                             GitHub
                         </button>
                         <button onClick={() => window.open("https://is-this-it.tistory.com")}>
