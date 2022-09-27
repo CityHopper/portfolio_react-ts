@@ -239,12 +239,6 @@ $line-height: calc(#{$clip-height} - 5px);
     }
   }
 
-  .navbar {
-    &__misc {
-      border-bottom: 1px solid var(--gray-100);
-    }
-  }
-
   .word-step {
     padding: 0;
   }

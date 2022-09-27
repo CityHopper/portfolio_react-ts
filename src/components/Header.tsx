@@ -60,7 +60,11 @@ function Header() {
     return (
         <header>
             <nav role="navigation" className={
-                (!isScrolledDown && !isMobileMenuOpen) ? "navbar flex__start" : "navbar navbar--dark flex__start"}>
+                (!isScrolledDown && !isMobileMenuOpen)
+                    ? "navbar flex__start"
+                    : isMobileMenuOpen
+                        ? "navbar navbar--dark navbar--mobile flex__start"
+                        : "navbar navbar--dark flex__start"}>
                 <Link className="navbar__title"
                       to={"/"} tabIndex={0}>Younghoon KANG</Link>
                 <ul
