@@ -88,6 +88,13 @@ function Header() {
                     className={isMobileMenuOpen
                         ? "navbar__misc active"
                         : "navbar__misc"}>
+                    <li className="navbar__misc__item flex__between">
+                        <button onClick={() => window.open(`https://github.com/CityHopper/react_movie`)}>
+                            GitHub</button>
+                        <button onClick={() => window.open("https://is-this-it.tistory.com")}>
+                            Blog</button>
+                    </li>
+
                     <li className="navbar__misc__item flex__center">
                         {isKo
                             ?
@@ -102,10 +109,6 @@ function Header() {
 
                         }
                     </li>
-                    {/*<li className="navbar__misc__item flex__center">*/}
-                    {/*    <NavLink className={"flex__center"} onClick={() => setIsMobileMenuOpen(false)}*/}
-                    {/*             to={"/about"}>#</NavLink>*/}
-                    {/*</li>*/}
                 </ul>
 
                 <div className="navbar__toggle">
