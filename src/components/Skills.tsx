@@ -13,9 +13,9 @@ function Skills() {
     }
 
     let skillList: Array<skill> = [
-        {name: "Front-end", level: 90, item: ["React", "Redux", "HTML5", "SCSS", "CSS3", "ES6+", "TypeScript"]},
-        {name: "Back-end", level: 60, item: ["Flask", "AWS", "Django", "SQL"]},
-        {name: "Data Science", level: 50, item: ["Python", "R", "Pandas", "Numpy", "NLP"]},
+        {name: "Front-end", level: 90, item: ["React", "Redux", "HTML5", "CSS3", "SCSS", "JavaScript(ES6+)", "TypeScript"]},
+        {name: "Back-end", level: 60, item: ["Flask", "Django", "AWS", "SQL"]},
+        {name: "Data Science", level: 50, item: ["Python", "R", "Pandas", "Numpy", "NLP", "Tensorflow"]},
         {name: "Co-work", level: 70, item: ["Git (GitHub/GitLab)", "Zeplin", "Slack"]}
     ]
 
