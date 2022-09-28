@@ -43,8 +43,6 @@ function Header() {
         'About', 'Skills', 'Career', 'Contact'
     ]
 
-    useEffect(() => console.log(Menu))
-
     return (
         <header>
             <nav role="navigation" className={

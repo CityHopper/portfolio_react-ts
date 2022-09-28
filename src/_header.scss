@@ -58,11 +58,13 @@ header {
           text-decoration: none;
           font-size: 1.2em;
           letter-spacing: 2px;
+
+          &.active {
+            color: var(--main-color);
+          }
         }
 
-        a.active {
-          color: var(--main-color);
-        }
+
 
         &:hover a {
           color: var(--sub-color);

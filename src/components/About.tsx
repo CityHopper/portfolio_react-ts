@@ -187,10 +187,6 @@ const WordSphere = memo(() => {
 function About() {
     const [t] = useTranslation();
 
-    let width = window.screen.width;
-    useEffect(()=>{
-        console.log(width)
-    },[])
     return (
         <article className={"container"}>
             <section className={"container__half"}>
