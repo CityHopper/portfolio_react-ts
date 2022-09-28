@@ -1,6 +1,7 @@
 import "_skills.scss"
 import {useTranslation} from "react-i18next";
 import {Fragment} from "react";
+import Title from "./Title";
 
 function Skills() {
     const [t] = useTranslation("skills");
@@ -31,7 +32,7 @@ function Skills() {
     return (
         <article className={"container flex__wrap"}>
             <section className={"container__half"}>
-                <h1>Skills & Qualifications</h1>
+                <Title title="Skills & Qualifications"/>
                 <p>
                     {t("skills-1")}
                 </p>

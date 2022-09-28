@@ -1,6 +1,7 @@
 import {memo, useRef, useState, RefObject, useCallback, useEffect} from 'react';
 import '_about.scss';
 import {useTranslation} from "react-i18next";
+import Title from "./Title";
 
 const texts: string[] = [
     'React',
@@ -190,7 +191,7 @@ function About() {
     return (
         <article className={"container"}>
             <section className={"container__half"}>
-                <h1>About Myself</h1>
+                <Title title="About Myself"/>
                 <p>
                     {t("about:about-1")}
                 </p>

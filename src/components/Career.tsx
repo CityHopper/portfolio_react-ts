@@ -1,6 +1,7 @@
 import "_skills.scss";
-import {Fragment, useEffect} from "react";
+import {Fragment} from "react";
 import {useTranslation} from "react-i18next";
+import Title from "./Title";
 
 function Career() {
     const [t] = useTranslation('career');
@@ -27,7 +28,7 @@ function Career() {
 
     return (
         <article className={"container flex__column"}>
-            <h1>Career & Experience</h1>
+            <Title title="Career & Experience"/>
             {company ? (company || []).map((com: any, id: number) => (
                     <section key={id} className={"box"}>
                         <h4 className={"box__title bg--gray"}>{com.name}</h4>

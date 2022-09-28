@@ -2,6 +2,7 @@ import {useRef} from "react";
 import {useForm, SubmitHandler} from "react-hook-form";
 import emailjs from '@emailjs/browser';
 import {useTranslation} from "react-i18next";
+import Title from "./Title";
 
 function Contact() {
     const [t] = useTranslation('contact');
@@ -35,7 +36,7 @@ function Contact() {
     return (
         <article className={"container"}>
             <section className={"container__whole flex__column"}>
-                <h1>Contact Me</h1>
+                <Title title="Contact Me"/>
                 <form className={"form"} ref={form}
                       onSubmit={handleSubmit(onSubmitHandler)}>
                     <label>{t("name")}</label>
