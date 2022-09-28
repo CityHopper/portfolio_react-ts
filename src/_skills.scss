@@ -16,6 +16,7 @@
     &__summary {
       width: 25%;
     }
+
     &__detail {
       width: 75%;
     }
@@ -31,6 +32,7 @@
     text-align: center;
   }
 }
+
 .works {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -105,9 +107,11 @@
 
     &__content {
       flex-direction: column;
-      &__summary, &__detail{
+
+      &__summary, &__detail {
         width: 90%;
       }
+
       &__summary {
         text-align: center;
       }
@@ -115,7 +119,6 @@
       &__detail {
         ul {
           margin-block-start: 0;
-          //padding-left: 0;
         }
       }
     }
@@ -129,9 +132,10 @@
 
     p {
       margin-block-start: 0;
+
       &:nth-child(4n-1):after {
-        content:"";
-        display:flex;
+        content: "";
+        display: flex;
         margin: 1em 0;
         transform: translateX(calc(13%));
         background-color: var(--gray-250);

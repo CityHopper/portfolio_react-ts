@@ -60,9 +60,13 @@ header {
           letter-spacing: 2px;
         }
 
+        a.active {
+          color: var(--main-color);
+        }
+
         &:hover a {
-          color: var(--gray-200);
-          transition: color 1s;
+          color: var(--sub-color);
+          transition: color 0.2s;
         }
 
       }

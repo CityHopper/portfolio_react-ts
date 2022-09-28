@@ -1,10 +1,9 @@
 import React, {useCallback, useEffect, useState} from "react";
-import {Link, NavLink, useLocation, useNavigate} from "react-router-dom";
+import {Link, NavLink, useLocation} from "react-router-dom";
 import "../_header.scss"
 import {useTranslation} from "react-i18next";
 
 function Header() {
-    const navigate = useNavigate();
     const [isScrolledDown, setIsScrolledDown] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const mobileMenuHandler = () => setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -37,9 +36,14 @@ function Header() {
     const [isKo, setIsKo] = useState<boolean>(true);
 
     useEffect(() => {
-        console.log("i18n", i18n.language)
         i18n.language === 'ko-KR' ? setIsKo(true) : setIsKo(false)
     }, [i18n.language])
+
+    let Menu: Array<string> = [
+        'About', 'Skills', 'Career', 'Contact'
+    ]
+
+    useEffect(() => console.log(Menu))
 
     return (
         <header>
@@ -55,22 +59,16 @@ function Header() {
                     className={isMobileMenuOpen
                         ? "navbar__menu active flex__between"
                         : "navbar__menu flex__between"}>
-                    <li className="navbar__menu__item">
-                        <NavLink className={"flex__center"} onClick={() => setIsMobileMenuOpen(false)}
-                                 to={"/about"}>About</NavLink>
-                    </li>
-                    <li className="navbar__menu__item">
-                        <NavLink className={"flex__center"} onClick={() => setIsMobileMenuOpen(false)}
-                                 to={"/skills"}>Skills</NavLink>
-                    </li>
-                    <li className="navbar__menu__item">
-                        <NavLink className={"flex__center"} onClick={() => setIsMobileMenuOpen(false)}
-                                 to={"/career"}>Career</NavLink>
-                    </li>
-                    <li className="navbar__menu__item">
-                        <NavLink className={"flex__center"} onClick={() => setIsMobileMenuOpen(false)}
-                                 to={"/contact"}>Contact</NavLink>
-                    </li>
+                    {Menu.map((i, id) => (
+                        <li key={id}
+                            className={`navbar__menu__item`}>
+                            <NavLink
+                                className={location.pathname.replace('/', '') === i.toLocaleLowerCase()
+                                    ? "flex__center active" : "flex__center"}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                to={`/${i.toLocaleLowerCase()}`}>{i}</NavLink>
+                        </li>
+                    ))}
                 </ul>
                 <ul
                     className={isMobileMenuOpen
