@@ -5,7 +5,6 @@ import Title from "./Title";
 
 function Career() {
     const [t] = useTranslation('career');
-    const company: Company[] = t('company', {returnObjects: true});
 
     type Company = {
         name?: string;
@@ -18,13 +17,16 @@ function Career() {
         content?: string[];
     }
 
+    const company: Company[] = t('company', {returnObjects: true});
+
     type Education = {
         [key: string]: any;
         name?: string;
         association?: string;
+        period?: string;
         content?: string[];
     }
-    const education: Education = t('education', {returnObjects: true});
+    const education: Education[] = t('education', {returnObjects: true});
 
     return (
         <article className={"container flex__column"}>
@@ -55,21 +57,24 @@ function Career() {
                 )
             ) : null}
 
-            <section className={"box"}>
-                <h4 className={"box__title bg--gray"}>{education.name}</h4>
-                <div className={"box__content flex__between"}>
-                    <div className={"box__content__summary"}>
-                        <h5>{education && education.association}</h5>
-                        <h5>2019.11 ~ 2020.06</h5>
-                    </div>
-                    <div className={"box__content__detail"}>
-                        <ul>
-                            {education ? (education.content || []).map((e: string, eid: number) => (
-                                <li key={`${eid}`}>{e}</li>)) : null}
-                        </ul>
-                    </div>
-                </div>
-            </section>
+            {education ? (education || []).map((e: any, eid: number) => (
+                    <section key={eid} className={"box"}>
+                        <h4 className={"box__title bg--gray"}>{e.name}</h4>
+                        <div className={"box__content flex__between"}>
+                            <div className="box__content__summary">
+                                <h5>{e.association}</h5>
+                                <h5>{e.period}</h5>
+                            </div>
+                            <div className={"box__content__detail"}>
+                                <ul>
+                                    {e ? (e.content || []).map((content: string, cid: number) => (
+                                        <li key={`${cid}`}>{content}</li>)) : null}
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                )
+            ) : null}
         </article>
     )
 }

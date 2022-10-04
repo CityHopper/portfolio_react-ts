@@ -47,9 +47,11 @@
       ]
     }
   ],
-  "education": {
+  "education": [
+    {
       "name": "Big Data Course",
       "association": "The Korea Economic Daily / Jeju TechnoPark",
+      "period": "2019.11 ~ 2020.06",
       "content": [
         "Basic statistics and data analysis with visualization using R/Python",
         "Understanding of databases with MySQL",
@@ -57,5 +59,14 @@
         "AI modeling using Tensorflow/Keras framework",
         "Designed and developed Jeju Tourist Info ChatBot with Natural Language Processing \n (Participated in 2020 Jeju Public Data Start-up Competition)"
       ]
+    },
+    {
+      "name": "Pukyong National University",
+      "association": "Busan, Republic of Korea",
+      "period": "2009.03 ~ 2016.02",
+      "content": [
+        "Bachelor of Marine Bio-materials and Aquaculture (Major) / English Language and Literature (Minor)"
+      ]
     }
+  ]
 }
